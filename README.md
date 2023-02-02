@@ -1,1 +1,1 @@
-# selenium_bot
+# Selenium bot that autocompletes online form and then starts playing 'cookie clicker' online
