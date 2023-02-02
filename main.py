@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+import time
 
 # Set up executable path for chromedriver:
 service = Service(executable_path="Users/aki/chromedriver")
@@ -37,6 +38,9 @@ button.click()
 # -------------------------- AUTOMATED COOKIE CLICKER --------------------------
 
 driver.get("https://orteil.dashnet.org/cookieclicker/")
+
+# Wait 20 seconds to make sure that all website elements load up properly:
+time.sleep(20)
 
 # Find website cookie disclaimer and click it:
 got_it = driver.find_element(By.LINK_TEXT, "Got it!")
