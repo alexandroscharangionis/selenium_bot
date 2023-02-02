@@ -32,3 +32,21 @@ email.send_keys("alexandroscharangionis@gmail.com")
 
 # Submit form
 button.click()
+
+
+# -------------------------- AUTOMATED COOKIE CLICKER --------------------------
+
+driver.get("https://orteil.dashnet.org/cookieclicker/")
+
+# Find website cookie disclaimer and click it:
+got_it = driver.find_element(By.LINK_TEXT, "Got it!")
+got_it.click()
+
+# Find 'english' language button and click it:
+english_lang = driver.find_element(By.ID, "langSelect-EN")
+english_lang.click()
+
+# Find cookie button and click it continuously:
+cookie_button = driver.find_element(By.ID, "bigCookie")
+while True:
+    cookie_button.click()
